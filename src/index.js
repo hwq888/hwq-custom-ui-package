@@ -1,3 +1,5 @@
+// 导入常用工具类
+// import utils from './utils'
 // 导入单个组件
 import Dialog from './components/Dialog'
 import Message from './components/Message'
@@ -25,6 +27,8 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
+  // 导出常用工具类
+  // utils,
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
   install,
   // 组件列表

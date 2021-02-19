@@ -14,6 +14,7 @@ npm link hwq-custom-ui-package
 
 ```
 
+
 ## 如何发布npm包
 ```
 第一步：登录
@@ -23,6 +24,28 @@ npm login
 npm publish
 
 ```
+
+
+
+## 如何发布私服npm包
+#### 设置私服npm下载地址，这里的地址是私服包含代理外网地址
+```bash
+npm config set registry http://10.10.60.226:8073/repository/npm-all/
+```
+#### 登录私服npm，这里的地址是私服内部地址
+```bash
+npm login --registry=http://10.10.60.226:8073/repository/npm-internal/
+```
+#### 私服特殊配置
+```bash
+  "main": "lib/dependency-package.common.js", // 这个是依赖包入口文件，安装后会自动引用这个文件
+  "publishConfig": { // 设置发布地址
+    "registry" : "http://10.10.60.226:8073/repository/npm-internal/"
+  }
+```
+
+
+
 
 ## vue自定义ui组件上传至npm中怎么使用
 ```

@@ -1,15 +1,14 @@
 <template>
   <div>
-    <el-button type="text" @click="dialogVisible = true">点击打开 Dialog</el-button>
     <el-dialog
       title="提示"
       :visible.sync="dialogVisible"
       width="30%"
-      :before-close="handleClose">
-      <span>这是一段信息</span>
+      :before-close="closeDialog">
+      <span>{{dialogData.msg}}</span>
       <span slot="footer" class="dialog-footer">
-        <el-button @click="dialogVisible = false">取 消</el-button>
-        <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+        <el-button @click="closeDialog">取消</el-button>
+        <el-button type="primary" @click="closeDialog">确定</el-button>
       </span>
     </el-dialog>
   </div>
@@ -17,9 +16,28 @@
 <script>
 export default {
   name: 'Dialog',
+  props: {
+    dialogVisible: {
+      type: Boolean
+    },
+    dialogData: {
+      type: Object
+    }
+  },
   data () {
     return {
-      dialogVisible: false
+      // visible: this.dialogVisible
+    }
+  },
+  watch: {
+    async dialogVisible (val, oldVal) {
+      // type 1: 申请 2：审核 3:查看
+      // this.visible = val
+      if (val) {
+        console.log('弹窗可见')
+      } else {
+        console.log('弹窗不可见')
+      }
     }
   },
   methods: {
@@ -29,6 +47,9 @@ export default {
           done()
         })
         .catch(_ => {})
+    },
+    closeDialog () {
+      this.$emit('update:dialogVisible', false)
     }
   }
 }

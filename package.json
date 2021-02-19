@@ -1,7 +1,19 @@
 {
   "name": "hwq-custom-ui-package",
-  "version": "0.0.3",
-  "author": "",
+  "version": "0.0.4",
+  "author": "hwq888_ok@163.com",
+  "keywords": [
+    "测试"
+  ],
+  "description": "测试研究专用，别下载",
+  "homepage": "https://github.com/hwq888/hwq-custom-ui-package",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hwq888/hwq-custom-ui-package"
+  },
+  "bugs": {
+    "url": "https://github.com/hwq888/hwq-custom-ui-package/issues"
+  },
   "main": "./dist/hwq-custom-ui-package.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
