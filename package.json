@@ -1,12 +1,17 @@
 {
   "name": "hwq-custom-ui-package",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "author": "hwq888_ok@163.com",
   "keywords": [
     "测试"
   ],
   "description": "测试研究专用，别下载",
   "homepage": "https://github.com/hwq888/hwq-custom-ui-package",
+  "files": [
+    "dist/",
+    "README.md",
+    "package.json"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hwq888/hwq-custom-ui-package"
