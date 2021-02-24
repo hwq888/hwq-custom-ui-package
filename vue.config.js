@@ -2,7 +2,7 @@ module.exports = {
   publicPath: './', // build打包配置相对路径
   // outputDir: 'dist', // 打包文件夹
   // assetsDir: './static', // 打包静态文件路径
-  // productionSourceMap: false,
+  productionSourceMap: false,
   devServer: {
     overlay: {
       warnings: false,
