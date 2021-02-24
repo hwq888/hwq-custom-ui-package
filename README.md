@@ -3,7 +3,7 @@
 ## 如何在本地测试自定义ui组件是否可用
 ```
 第一步：执行打包命令
-npm run build-bundle
+npm run build:lib
 
 第二步：从项目跟目录下面执行
 npm link
