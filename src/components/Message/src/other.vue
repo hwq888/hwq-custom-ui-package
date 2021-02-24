@@ -1,24 +1,18 @@
 <template>
   <div class="hello">
-    <Other></Other>
-    <h1>{{ msg }}</h1>
+    <h1>其他组件msg</h1>
   </div>
 </template>
 
 <script>
-import Other from './other'
 export default {
-  name: 'Message',
-  components: { Other },
-  props: {
-    msg: String
-  }
+  name: 'Other'
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 h1 {
-  color: #42b983;
+  color: #ff0000;
 }
 </style>

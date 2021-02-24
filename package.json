@@ -1,12 +1,17 @@
 {
   "name": "hwq-custom-ui-package",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "author": "hwq888_ok@163.com",
   "keywords": [
     "测试"
   ],
   "description": "测试研究专用，别下载",
   "homepage": "https://github.com/hwq888/hwq-custom-ui-package",
+  "files": [
+    "lib/",
+    "README.md",
+    "package.json"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hwq888/hwq-custom-ui-package"
@@ -14,11 +19,11 @@
   "bugs": {
     "url": "https://github.com/hwq888/hwq-custom-ui-package/issues"
   },
-  "main": "./dist/hwq-custom-ui-package.common.js",
+  "main": "./lib/hwq-custom-ui-package.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-bundle": "vue-cli-service build --target lib --name hwq-custom-ui-package ./src/index.js",
+    "build:lib": "vue-cli-service build --target lib --name hwq-custom-ui-package --dest lib ./src/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
